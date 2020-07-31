@@ -12,10 +12,8 @@ DISCORD_WEBHOOK_URL = os.environ['DISCORD_WEBHOOK_URL']
 
 def main():
     latest = fetch_latest()
-    # NOTE: GitHub Actions의 Cron 최소 인터벌 설정은 5분이지만,
-    # 실제 실행되는 패턴을 보니 7~10분 정도 걸리기 때문에, 중복되더라도 놓치는 것이 없도록
-    # 대략 10분으로 잡는다.
-    if tweeted_within_n_minutes(latest, 10):
+    # NOTE: GitHub Actions의 Cron 인터벌 최소 값은 5분이다.
+    if tweeted_within_n_minutes(latest, 5):
         post_message(latest)
 
 
