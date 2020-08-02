@@ -35,9 +35,18 @@ def post_message(latest):
         'embeds': [{
             'title': '찬웅이형 트위터 그만해',
             'description': f'> {latest.text}',
+            'url': assemble_status_url(latest),
             'image': {'url': 'https://yeonghoey.github.io/stoptwitteringkexplo/main.jpg'},
         }],
     })
+
+
+def assemble_status_url(latest):
+    # NOTE: Status로 직접가는 URL을 python-twitter에서
+    # 만들어주지 않는 것으로 보인다.
+    user_id = latest.user.id
+    status_id = latest.id
+    return f'https://twitter.com/{user_id}/status/{status_id}'
 
 
 if __name__ == '__main__':
