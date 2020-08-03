@@ -32,8 +32,9 @@ def tweeted_within_n_minutes(latest, n):
 
 def post_message(latest):
     requests.post(DISCORD_WEBHOOK_URL, json={
+        'content': '<:stoptwitteringkexplo1:739660978039291986><:stoptwitteringkexplo2:739660978345476228><:stoptwitteringkexplo3:739660978408521759>\n<:stoptwitteringkexplo4:739659949168263239><:stoptwitteringkexplo5:739659948140527656><:stoptwitteringkexplo6:739659948820004894>\n<:stoptwitteringkexplo7:739659947872354305><:stoptwitteringkexplo8:739659948270682157><:stoptwitteringkexplo9:739659948161761400>',
         'embeds': [{
-            'title': '찬웅이형 트위터 그만해 <:twitteringkexplo:739642029646282765>',
+            'title': '찬웅이형 트위터 그만해',
             'description': f'> {latest.text}',
             'url': assemble_status_url(latest),
         }],
