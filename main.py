@@ -37,7 +37,7 @@ def post_message(latest):
             'description': f'> {latest.text}',
             'url': assemble_status_url(latest),
             'thumbnail': {
-                'url': 'https://yeonghoey.github.io/stoptwitteringkexplo/main.jpg',
+                'url': 'https://yeonghoey.github.io/stoptwitteringkexplo/index.jpg',
             },
         }],
     })
