@@ -34,7 +34,7 @@ def post_message(latest):
     requests.post(DISCORD_WEBHOOK_URL, json={
         'embeds': [{
             'title': '찬웅이형 트위터 그만해',
-            'description': f'> {latest.text}',
+            'description': latest.text,
             'url': assemble_status_url(latest),
             'thumbnail': {
                 'url': 'https://yeonghoey.github.io/stoptwitteringkexplo/index.jpg',
