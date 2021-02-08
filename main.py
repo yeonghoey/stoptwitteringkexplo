@@ -22,7 +22,7 @@ def fetch_latest():
                       consumer_secret=TWITTER_API_KEY_SECRET,
                       access_token_key=TWITTER_ACCESS_TOKEN,
                       access_token_secret=TWITTER_ACCESS_TOKEN_SECRET)
-    return api.GetUserTimeline(screen_name='Kexplo', count=1)[0]
+    return api.GetUserTimeline(screen_name='Kexplo', count=1, exclude_replies=True)[0]
 
 
 def tweeted_within_n_minutes(latest, n):
